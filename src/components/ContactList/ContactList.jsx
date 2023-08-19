@@ -6,14 +6,13 @@ import {
   selectFilterContacts,
   selectIsLoading,
 } from 'redux/selectors';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/Contacts/operations';
 
 const ContactList = () => {
   const filteredContacts = useSelector(selectFilterContacts);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const dispatch = useDispatch();
-
 
   const removeContact = contactId => {
     dispatch(deleteContact(contactId));
