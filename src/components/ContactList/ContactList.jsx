@@ -5,7 +5,7 @@ import {
   selectError,
   selectFilterContacts,
   selectIsLoading,
-} from 'redux/selectors';
+} from 'redux/Contacts/selectors';
 import { deleteContact } from 'redux/Contacts/operations';
 
 const ContactList = () => {
@@ -30,7 +30,7 @@ const ContactList = () => {
       <List>
         {filteredContacts.map(contact => (
           <Item key={contact.id}>
-            {contact.name + ' : ' + contact.phone}
+            {contact.name + ' : ' + contact.number}
             {
               <Button
                 type="button"
